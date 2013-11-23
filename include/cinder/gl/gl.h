@@ -29,6 +29,9 @@
 	#include <OpenGL/glext.h>
 #elif defined( CINDER_MSW )
 	#include "cinder/gl/GLee.h"
+	#if _MSC_VER >= 1600 // VC10 or greater
+        #define __FP__
+	#endif
 #else
 	#define CINDER_GLES
 	#define CINDER_GLES1
